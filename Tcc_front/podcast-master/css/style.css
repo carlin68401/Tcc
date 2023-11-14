@@ -991,3 +991,11 @@ a {
 @media (max-width: 991.98px) {
   .hero h1 {
     font-size: 40px !important; } }
+
+.logo {
+  position: center;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px; }
+}
