@@ -28,7 +28,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
 
-            header("Location: painel.php");
+            header("Location: inicio.html");
 
         } else {
             echo "Falha ao logar! E-mail ou senha incorretos";
@@ -85,7 +85,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-6 offset-md-3">
-                    <form action="login.php" method="post">
+                    <form form action="" method="post">
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" id="email" placeholder="Digite seu email">
