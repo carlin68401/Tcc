@@ -40,7 +40,5 @@ if ($resultado === false) {
   exit;
 }
 
-// Retornar ao formulário de login
-header("Location: login.php");
 
 ?>
