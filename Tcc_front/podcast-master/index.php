@@ -85,17 +85,17 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-6 offset-md-3">
-                    <form form action="" method="post">
+                    <form form action="" method="POST">
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Digite seu email">
                         </div>
                         <div class="form-group">
                             <label for="senha">Senha:</label>
-                            <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+                            <input type="password" class="form-control" name="senha" id="senha" placeholder="Digite sua senha">
                         </div>
                         <button type="submit" class="btn btn-primary">Entrar</button>
-                        <a href="cadastrar.php" class="btn-link" style="padding-left: 10px;">Cadastrar</a>
+                        <a href="cadastro.php" class="btn-link" style="padding-left: 10px;">Cadastrar</a>
                     </form>
                 </div>
             </div>
