@@ -59,11 +59,13 @@ include('protect.php');
 
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
-                  <a href="index.html">Inicio</a>
+                  <a href="inicio.php">Inicio</a>
                 
                 <li class="active">
-                <li><a href="about.html">Sobre</a></li>
+                <li><a href="about.php">Sobre</a></li>
                </li>
+             
+                <li> <a href="logout.php">Sair</a></li>
               </ul>
             </nav>
 
