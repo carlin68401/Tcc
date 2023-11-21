@@ -1,5 +1,44 @@
+<?php
+include('conexao.php');
+
+if(isset($_POST['email']) || isset($_POST['senha'])) {
+
+    if(strlen($_POST['email']) == 0) {
+        echo "Preencha seu e-mail";
+    } else if(strlen($_POST['senha']) == 0) {
+        echo "Preencha sua senha";
+    } else {
+
+        $email = $conexao->real_escape_string($_POST['email']);
+        $senha = $conexao->real_escape_string($_POST['senha']);
+
+        $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+        $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
+
+        $quantidade = $sql_query->num_rows;
+
+        if($quantidade == 1) {
+            
+            $usuario = $sql_query->fetch_assoc();
+
+            if(!isset($_SESSION)) {
+                session_start();
+            }
+
+            $_SESSION['id'] = $usuario['id'];
+            $_SESSION['nome'] = $usuario['nome'];
+
+            header("Location: painel.php");
+
+        } else {
+            echo "Falha ao logar! E-mail ou senha incorretos";
+        }
+
+    }
+
+}
+?>
 <!DOCTYPE html>
-<<<<<<< Updated upstream
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -61,17 +100,5 @@
                 </div>
             </div>
         </div>
-=======
-<html lang="pt-br">
-<head>
-  <title>Login</title>
-</head>
-<body>
-  <form action="login.php" method="post">
-    <input type="text" name="email" placeholder="E-mail">
-    <input type="password" name="senha" placeholder="Senha">
-    <input type="submit" value="Login">
-  </form>
->>>>>>> Stashed changes
 </body>
 </html>
