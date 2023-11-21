@@ -1152,7 +1152,9 @@ html {
 .align-items-center {
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
-  align-items: center !important; }
+  align-items: center !important;
+  justify-content: center !important;
+  padding-right: 13% !important; }
 
 .align-items-baseline {
   -webkit-box-align: baseline !important;
