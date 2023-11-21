@@ -1,3 +1,43 @@
+<?php
+include('conexao.php');
+
+if(isset($_POST['email']) || isset($_POST['senha'])) {
+
+    if(strlen($_POST['email']) == 0) {
+        echo "Preencha seu e-mail";
+    } else if(strlen($_POST['senha']) == 0) {
+        echo "Preencha sua senha";
+    } else {
+
+        $email = $conexao->real_escape_string($_POST['email']);
+        $senha = $conexao->real_escape_string($_POST['senha']);
+
+        $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+        $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
+
+        $quantidade = $sql_query->num_rows;
+
+        if($quantidade == 1) {
+            
+            $usuario = $sql_query->fetch_assoc();
+
+            if(!isset($_SESSION)) {
+                session_start();
+            }
+
+            $_SESSION['id'] = $usuario['id'];
+            $_SESSION['nome'] = $usuario['nome'];
+
+            header("Location: inicio.html");
+
+        } else {
+            echo "Falha ao logar! E-mail ou senha incorretos";
+        }
+
+    }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +85,7 @@
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-6 offset-md-3">
-                    <form action="login.php" method="post">
+                    <form form action="" method="post">
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" id="email" placeholder="Digite seu email">
@@ -55,7 +95,7 @@
                             <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
                         </div>
                         <button type="submit" class="btn btn-primary">Entrar</button>
-                        <a href="cadastrar.html" class="btn-link" style="padding-left: 10px;">Cadastrar</a>
+                        <a href="cadastrar.php" class="btn-link" style="padding-left: 10px;">Cadastrar</a>
                     </form>
                 </div>
             </div>
