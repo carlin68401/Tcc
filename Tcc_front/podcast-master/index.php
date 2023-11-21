@@ -95,7 +95,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
                             <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
                         </div>
                         <button type="submit" class="btn btn-primary">Entrar</button>
-                        <a href="cadastrar.html" class="btn-link" style="padding-left: 10px;">Cadastrar</a>
+                        <a href="cadastrar.php" class="btn-link" style="padding-left: 10px;">Cadastrar</a>
                     </form>
                 </div>
             </div>
