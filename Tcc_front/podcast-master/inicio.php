@@ -63,6 +63,7 @@ include('protect.php');
                 </li>
               
                 <li><a href="about.php">Sobre</a></li>
+                <li><a href="logout.php">Sair</a></li>
                
               </ul>
             </nav>
