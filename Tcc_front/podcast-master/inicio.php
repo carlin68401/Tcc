@@ -119,6 +119,9 @@ include('protect.php');
                   </div>
                 </div>
               
+                <p>
+        <a href="logout.php">Sair</a>
+    </p>
     
     <footer class="site-footer">
       
@@ -133,6 +136,7 @@ include('protect.php');
         </div>
       </div>
     
+      
     </footer>
   
 <!--teste-->
