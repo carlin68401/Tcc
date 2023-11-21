@@ -86,7 +86,7 @@
                         <input type="password" class="form-control" placeholder="Digite sua senha" id="senha" name="senha" required>
                     </div>
                     <button type="submit" name="submit" id="submit" class="btn btn-primary">Cadastrar</button>
-                    <p>Já tem uma conta? <a href="login.html">Faça login aqui</a>.</p>
+                    <p>Já tem uma conta? <a href="login.php">Faça login aqui</a>.</p>
                 </form>
                 
             </div>
