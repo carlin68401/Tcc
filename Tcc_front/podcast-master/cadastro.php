@@ -86,7 +86,7 @@
                         <input type="password" class="form-control" placeholder="Digite sua senha" id="senha" name="senha" required>
                     </div>
                     <button type="submit" name="submit" id="submit" class="btn btn-primary" style="background-color:#35384B; border-color:#35384B">Cadastrar</button>
-                    <p>Já tem uma conta? <a href="index.php">Faça login aqui</a>.</p>
+                    <p>Já tem uma conta? <a href="index.php" style="color:#F31111">Faça login aqui</a>.</p>
                 </form>
                 
             </div>
