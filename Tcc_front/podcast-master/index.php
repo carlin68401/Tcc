@@ -94,7 +94,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
                             <label for="senha">Senha:</label>
                             <input type="password" class="form-control" name="senha" id="senha" placeholder="Digite sua senha">
                         </div>
-                        <button type="submit" class="btn btn-primary">Entrar</button>
+                        <button type="submit" class="btn btn-primary" style="background-color:#35384B; border-color:#35384B">Entrar</button>
                         <a href="cadastro.php" class="btn-link" style="padding-left: 10px;">Cadastrar</a>
                     </form>
                 </div>

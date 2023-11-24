@@ -1998,24 +1998,19 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #3ca59d;
-  border-color: #3ca59d; }
+   }
   .btn-primary:hover {
     color: #fff;
-    background-color: #328982;
-    border-color: #2e8079; }
+  }
   .btn-primary:focus, .btn-primary.focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(60, 165, 157, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(60, 165, 157, 0.5); }
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: #3ca59d;
-    border-color: #3ca59d; }
+   }
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #2e8079;
-    border-color: #2b7671; }
+    color: #fff;}
     .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(60, 165, 157, 0.5);
