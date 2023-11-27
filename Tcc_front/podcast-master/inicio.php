@@ -109,9 +109,9 @@ include('protect.php');
 
 
             <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
-              <button type="button" onclick="init()">Iniciar Reconhecimento</button>
+              <button type="button" onclick="init()" name="submit" id="submit" class="btn btn-primary" style="background-color:#35384B; border-color:#35384B; width: 250px; height: 70px; margin: 15px;">Iniciar Reconhecimento</button>
             <div id="webcam-container"></div>
-            <div id="label-container"></div>
+            <div id="label-container" style="margin: 60px; text-align: center; display: flex; align-items: center; justify-content: center; font-family: 'Arial', sans-serif; font-size: 40px; color: #333;"></div>
               <div class="text">            
                </div>
               </div>          
