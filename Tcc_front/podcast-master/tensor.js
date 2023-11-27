@@ -2,7 +2,7 @@
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/3_pgjxdzZ/";
+    const URL = "https://teachablemachine.withgoogle.com/models/vX8TSkqPq/";
 
     let model, webcam, labelContainer, maxPredictions;
 
@@ -46,7 +46,7 @@
         for (let i = 0; i < maxPredictions; i++) {
             if (prediction[i].probability > 0.7){
             const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                prediction[i].className;
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
         else 
